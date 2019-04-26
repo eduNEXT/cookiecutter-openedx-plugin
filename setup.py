@@ -39,6 +39,8 @@ setup(
     install_requires=[],
     zip_safe=False,
     entry_points={
-        "lms.djangoapp": [],
+        "lms.djangoapp": [
+            'cookiecutter_openedx_plugin = cookiecutter_openedx_plugin.apps:CookiecutterOpenEdxpluginConfig',
+        ],
     }
 )
