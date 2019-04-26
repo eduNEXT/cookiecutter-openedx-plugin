@@ -1,0 +1,4 @@
+# Main requirements of your plugin application.
+
+Django==1.11.20
+pylint==1.9.3
