@@ -1,5 +1,0 @@
-include CHANGELOG.rst
-include LICENSE.txt
-include README.md
-include requirements/base.in
-recursive-include cookiecutter_openedx_plugin *.html *.png *.gif *js *.css *jpg *jpeg *svg *py

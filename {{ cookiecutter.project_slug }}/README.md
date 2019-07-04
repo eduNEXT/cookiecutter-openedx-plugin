@@ -1,6 +1,4 @@
-# Cookiecutter Open edX plugin
-
-The cookiecutter Open edX plugin is a template with the purpose to show the best Open edX plugins practices.
+# {{ cookiecutter.project_desc }}
 
 ## Features
 
@@ -22,7 +20,3 @@ Include a usage description for your plugin.
 ## Contributing
 
 Add your contribution policy. (If required)
-
-## License
-
-Place your license type notes as you need it.

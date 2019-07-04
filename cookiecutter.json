@@ -1,0 +1,5 @@
+{
+    "project_desc": "My Open edX Plugin",
+    "package_name": "plugin_name",
+    "project_slug": "{{ cookiecutter.package_name }}",
+}

@@ -21,8 +21,8 @@ requirements: ## install environment requirements
 
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -q pip-tools
-	pip-compile --output-file requirements/base.txt requirements/base.in
+	pip-compile -U --output-file requirements/base.txt requirements/base.in
 
 quality: clean ## check coding style with pycodestyle and pylint
-	pycodestyle ./cookiecutter_openedx_plugin
-	pylint ./cookiecutter_openedx_plugin --rcfile=./setup.cfg
+	pycodestyle ./{{ cookiecutter.package_name }}
+	pylint ./{{ cookiecutter.package_name }} --rcfile=./setup.cfg

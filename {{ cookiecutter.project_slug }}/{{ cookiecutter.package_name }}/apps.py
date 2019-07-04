@@ -9,21 +9,21 @@ from django.apps import AppConfig
 
 class CookiecutterOpenEdxpluginConfig(AppConfig):
     """
-    Cookiecutter-openedx-plugin configuration.
+    {{ cookiecutter.project_desc }} configuration.
     """
-    name = 'cookiecutter_openedx_plugin'
-    verbose_name = "Cookiecutter Open edX plugin."
+    name = '{{ cookiecutter.package_name }}'
+    verbose_name = '{{ cookiecutter.project_desc }}'
 
     plugin_app = {
         'url_config': {
             'lms.djangoapp': {
-                'namespace': 'cookiecutter_openedx_plugin',
-                'regex': r'^cookiecutter_openedx_plugin/',
+                'namespace': '{{ cookiecutter.package_name }}',
+                'regex': r'^{{ cookiecutter.package_name }}/',
                 'relative_path': 'urls',
             },
             'cms.djangoapp': {
-                'namespace': 'cookiecutter_openedx_plugin',
-                'regex': r'^cookiecutter_openedx_plugin/',
+                'namespace': '{{ cookiecutter.package_name }}',
+                'regex': r'^{{ cookiecutter.package_name }}/',
                 'relative_path': 'urls',
             }
         },
