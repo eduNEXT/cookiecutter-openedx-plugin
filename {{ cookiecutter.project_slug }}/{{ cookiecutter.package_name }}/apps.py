@@ -1,5 +1,5 @@
 """
-App configuration for cookiecutter-openedx-plugin.
+App configuration for {{ cookiecutter.package_name }}.
 """
 
 from __future__ import unicode_literals
@@ -7,23 +7,23 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class CookiecutterOpenEdxpluginConfig(AppConfig):
+class {{ cookiecutter.class_name }}Config(AppConfig):
     """
-    Cookiecutter-openedx-plugin configuration.
+    {{ cookiecutter.project_desc }} configuration.
     """
-    name = 'cookiecutter_openedx_plugin'
-    verbose_name = "Cookiecutter Open edX plugin."
+    name = '{{ cookiecutter.package_name }}'
+    verbose_name = '{{ cookiecutter.project_desc }}'
 
     plugin_app = {
         'url_config': {
             'lms.djangoapp': {
-                'namespace': 'cookiecutter_openedx_plugin',
-                'regex': r'^cookiecutter_openedx_plugin/',
+                'namespace': '{{ cookiecutter.package_name }}',
+                'regex': r'^{{ cookiecutter.package_name }}/',
                 'relative_path': 'urls',
             },
             'cms.djangoapp': {
-                'namespace': 'cookiecutter_openedx_plugin',
-                'regex': r'^cookiecutter_openedx_plugin/',
+                'namespace': '{{ cookiecutter.package_name }}',
+                'regex': r'^{{ cookiecutter.package_name }}/',
                 'relative_path': 'urls',
             }
         },

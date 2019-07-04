@@ -1,5 +1,5 @@
 """
-Common Django settings for cookiecutter_openedx_plugin project.
+Common Django settings for {{ cookiecutter.package_name }} project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.11/topics/settings/
@@ -21,7 +21,7 @@ SECRET_KEY = 'secret-key'
 
 INSTALLED_APPS = []
 
-ROOT_URLCONF = 'cookiecutter_openedx_plugin.urls'
+ROOT_URLCONF = '{{ cookiecutter.package_name }}.urls'
 
 
 # Internationalization
@@ -39,3 +39,4 @@ def plugin_settings(settings):
     Set of plugin settings used by the Open Edx platform.
     More info: https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/plugins/README.rst
     """
+    pass
