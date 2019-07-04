@@ -1,5 +1,5 @@
 """
-Init module for cookiecutter_openedx_plugin.
+Init module for {{ cookiecutter.package_name }}.
 """
 
 from __future__ import unicode_literals

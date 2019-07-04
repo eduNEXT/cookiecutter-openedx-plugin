@@ -1,5 +1,5 @@
 """
-AWS Django settings for cookiecutter_openedx_plugin project.
+AWS Django settings for {{ cookiecutter.package_name }} project.
 
 Juniper release will remove aws.py file. https://openedx.atlassian.net/browse/DEPR-14
 """

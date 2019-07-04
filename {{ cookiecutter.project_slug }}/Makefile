@@ -1,6 +1,6 @@
 ###############################################
 #
-# Cookiecutter Open edX plugin commands.
+# {{ cookiecutter.project_desc }} commands.
 #
 ###############################################
 

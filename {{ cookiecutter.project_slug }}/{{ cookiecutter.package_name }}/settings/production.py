@@ -1,5 +1,5 @@
 """
-Production Django settings for cookiecutter_openedx_plugin project.
+Production Django settings for {{ cookiecutter.package_name }} project.
 """
 
 from __future__ import unicode_literals

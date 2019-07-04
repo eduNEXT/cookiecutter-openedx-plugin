@@ -1,5 +1,5 @@
 """
-App configuration for cookiecutter-openedx-plugin.
+App configuration for {{ cookiecutter.package_name }}.
 """
 
 from __future__ import unicode_literals
@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class CookiecutterOpenEdxpluginConfig(AppConfig):
+class {{ cookiecutter.class_name }}Config(AppConfig):
     """
     {{ cookiecutter.project_desc }} configuration.
     """

@@ -1,5 +1,5 @@
 """
-Setup file for cookiecutter-openedx-plugin Django plugin.
+Setup file for {{ cookiecutter.package_name }} Django plugin.
 """
 
 from __future__ import print_function
@@ -23,24 +23,24 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
-VERSION = get_version('cookiecutter_openedx_plugin', '__init__.py')
+VERSION = get_version('{{ cookiecutter.package_name }}', '__init__.py')
 
 
 setup(
-    name='cookiecutter-openedx-plugin',
+    name='{{ cookiecutter.project_slug }}',
     version=VERSION,
-    description='Cookiecutter Open edX plugin template.',
+    description='{{ cookiecutter.project_desc }}',
     author='eduNEXT',
     author_email='contact@edunext.co',
     packages=[
-        'cookiecutter_openedx_plugin'
+        '{{ cookiecutter.package_name }}'
     ],
     include_package_data=True,
     install_requires=[],
     zip_safe=False,
     entry_points={
         "lms.djangoapp": [
-            'cookiecutter_openedx_plugin = cookiecutter_openedx_plugin.apps:CookiecutterOpenEdxpluginConfig',
+            '{{ cookiecutter.package_name }} = {{ cookiecutter.package_name }}.apps:{{ cookiecutter.class_name }}Config',
         ],
     }
 )
