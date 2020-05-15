@@ -4,6 +4,8 @@
 #
 ###############################################
 
+.PHONY: requirements
+
 .DEFAULT_GOAL := help
 
 help: ## display this help message
@@ -17,12 +19,15 @@ clean: ## delete most git-ignored files
 	find . -name '*~' -exec rm -f {} +
 
 requirements: ## install environment requirements
-	pip install -r requirements.txt
+	pip install -r requirements/base.txt
+
+compile-requirements: ## compile requirements files
+	pip-compile --output-file requirements/base.txt requirements/base.in
 
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -q pip-tools
 	pip-compile -U --output-file requirements/base.txt requirements/base.in
 
 quality: clean ## check coding style with pycodestyle and pylint
-	pycodestyle ./{{ cookiecutter.package_name }}
+	pycodestyle --config=setup.cfg ./{{ cookiecutter.package_name }}
 	pylint ./{{ cookiecutter.package_name }} --rcfile=./setup.cfg
