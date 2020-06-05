@@ -23,3 +23,5 @@ Enter the variables when prompted.
 - package_name -> python package name. You can use _ for spaces
 - project_slug -> Normally also the repo name. You can use - or _ for spaces
 - class_name -> used when defining the app config python class
+
+Once the openedx plugin is initialized, you should run in the root of the plugin **`make upgrade`** in order to generate the .txt requirements files used in the tests and for local development.

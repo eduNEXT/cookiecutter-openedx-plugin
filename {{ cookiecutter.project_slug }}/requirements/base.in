@@ -1,5 +1,4 @@
 # Main requirements of your plugin application.
+-c constraints.txt
 
-Django<2.0
-pylint==1.9.3
-pycodestyle==2.5.0
+Django
