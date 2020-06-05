@@ -4,6 +4,9 @@
 #
 ###############################################
 
+# Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
+PIP_COMPILE = pip-compile --rebuild --upgrade $(PIP_COMPILE_OPTS)
+
 .DEFAULT_GOAL := help
 
 help: ## display this help message
@@ -18,9 +21,6 @@ clean: ## delete most git-ignored files
 
 requirements: ## install environment requirements
 	pip install -r requirements/base.txt
-
-# Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
-PIP_COMPILE = pip-compile --rebuild --upgrade $(PIP_COMPILE_OPTS)
 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
