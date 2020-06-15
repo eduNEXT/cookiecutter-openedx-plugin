@@ -2,5 +2,6 @@
     "project_desc": "My Open edX Plugin",
     "package_name": "plugin_name",
     "project_slug": "{{ cookiecutter.package_name }}",
-    "class_name": "MyOpenEdxPlugin"
+    "class_name": "MyOpenEdxPlugin",
+    "version": "0.0.0"
 }
