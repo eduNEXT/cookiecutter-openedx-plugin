@@ -56,15 +56,34 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
+with open("README.rst", "r") as fh:
+    README = fh.read()
+
 VERSION = get_version('{{ cookiecutter.package_name }}', '__init__.py')
 
 
 setup(
     name='{{ cookiecutter.project_slug }}',
     version=VERSION,
-    description='{{ cookiecutter.project_desc }}',
     author='eduNEXT',
     author_email='contact@edunext.co',
+    description='{{ cookiecutter.project_desc }}',
+    license='AGPL',
+    long_description=README,
+    long_description_content_type='text/x-rst',
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.2',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU Affero General Public License v3',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.8',
+    ],
     packages=[
         '{{ cookiecutter.package_name }}',
     ],
